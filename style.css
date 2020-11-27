@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* background: rgb(119, 119, 119); */
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header{
+    position:fixed;
+    top:0;
+    left: 50%;
+    width:100%;
+    height:100px;
+    transform: translatex(-50%);
+    background-color: #fff;
+    transition: all 0.3s;
+}
+
+.nav-container{
+    width:80%;
+    height:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.company__logo{
+    height:50px;
+}
+
+.company__logo img{
+    height:100%;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar__link{
+    margin:15px;
+}
+
+.navbar__link:nth-of-type(7){
+    margin-right: 0px;
+}
+
+.navbar__link a,
+.nav-drop {
+    color: #555;
+    font-weight: 100;
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+.navbar__link:hover a {
+    color: rgb(19, 118, 231);
+}
+
+.navbar__link:nth-of-type(7) a{
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------------------- navbardrop ------------------------------- */
+
+.navbar__link {
+    position: relative;
+}
+
+.nav-drop{
+    position: absolute;
+    top:100%;
+    left:0;
+    min-width: 150px;
+    font-weight: 400;
+    border: 1px solid #eee;
+    transform: translate(-15px,15px);
+    visibility: hidden;
+    transition: all 0.3s;
+    transition-delay: 0.3s;
+}
+
+.navbar__link:hover .nav-drop,
+.nav-drop:hover {
+  visibility: visible;
+}
+
+.nav-drop::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 13px;
+  height: 13px;
+  background: #fff;
+  transform: translate(100%, -25%) rotate(45deg);
+  border: 1px solid rgb(233, 233, 233);
+  z-index: -1;
+}
+
+.nav-drop li{
+    padding:10px;
+    border-bottom: 1px solid #eee;
+    cursor:pointer;
+    background: #fff;
+}
+
+.nav-drop li:nth-of-type(3){
+    border-bottom: none;
+}
+
+/* ---------------------------- paragraph section --------------------------- */
+
+.container {
+    width: 80%;
+    height: 100%;
+    margin: 100px auto;
+    color: #fff;
+  }
+  
+  #home {
+    width: 100%;
+    padding: 50px 0;
+    background: url(pattern.png);
+  }
